@@ -20,6 +20,9 @@
     }
     .header-entry {
         line-height: 40px;
+        a{
+            margin: 0 4px;
+        }
         .current-city {
             color: #666;
         }
