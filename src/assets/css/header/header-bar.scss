@@ -26,6 +26,9 @@
         .current-city {
             color: #666;
         }
+        a:hover{
+            color: #fe8c00;
+        }
         .change-city {
             color: #666;
             background: #f4f4f4;
@@ -82,7 +85,7 @@
                 & > li > a {
                     line-height: 35px;
                 }
-                & > li > a:hover {
+                a:hover {
                     color: #fe8c00;
                 }
             }
