@@ -60,6 +60,7 @@
                 }
             }
             .header-nav-second {
+                width: 100%;
                 position: absolute;
                 border: 1px solid #e5e5e5;
                 background: #fff;
@@ -72,7 +73,6 @@
                 border-bottom-right-radius: 4px;
                 display: none;
                 // box-sizing: content-box;
-                width: 100%;
                 &::after {
                     content: "";
                     background: #fff;
@@ -94,6 +94,11 @@
                 box-sizing: border-box;
                 border-top-left-radius: 4px;
                 padding: 30px 36px 36px 47px;
+                &:after{
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
                 .header-nav-third {
                     margin-right: 47px;
                     float: left;

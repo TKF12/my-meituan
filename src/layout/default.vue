@@ -1,19 +1,25 @@
 <template>
   <el-container>
-    <el-header class="com-header">
+    <el-header class="com-header" height="">
         <Header />
     </el-header>
-    <el-main>Main</el-main>
-    <el-footer>Footer</el-footer>
+    <el-main>
+      <router-view></router-view>
+    </el-main>
+    <el-footer height="" padding="">
+      <Footer />
+    </el-footer>
 </el-container>
 </template>
 
 <script>
 import Header from '@/components/header/index.vue';
+import Footer from '@/components/footer/index.vue';
 
 export default {
   components: {
     Header,
+    Footer,
   },
 };
 </script>
