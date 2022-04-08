@@ -10,7 +10,8 @@
                         </dd>
                     </dl>
                 </div>
-                <div class="footer-column" v-for="item in telList" :key="new Date().getTime()">
+                <div class="footer-column"
+                  v-for="(item, i) in telList" :key="i + columnList.length">
                     <dl v-for="nn in item" :key="nn.title">
                         <dt>{{ nn.title }}</dt>
                         <dd v-for="n in nn.subtitle" :key="n.tal">
