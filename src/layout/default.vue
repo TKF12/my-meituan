@@ -6,7 +6,7 @@
     <el-main>
       <router-view></router-view>
     </el-main>
-    <el-footer height="" padding="">
+    <el-footer height="">
       <Footer />
     </el-footer>
 </el-container>
@@ -25,5 +25,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('~@/assets/css/layout/default.scss');
+@import '~@/assets/css/layout/default.scss';
 </style>

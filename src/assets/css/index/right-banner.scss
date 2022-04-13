@@ -1,0 +1,193 @@
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    &:before {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin shadow {
+    box-shadow: 0 5px 16px 0 rgb(0 0 0 / 15%);
+    transition: box-shadow 0.5s;
+}
+
+.right-banner {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+    .home-header-links {
+        position: absolute;
+        top: -45px;
+        left: 20px;
+        a {
+            color: #222;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 0 20px;
+            position: relative;
+        }
+        .waimai-link:hover {
+            color: #fbc700;
+        }
+        .maoyan-link:hover {
+            color: #ed1e24;
+        }
+        .hotel-link:hover {
+            color: #f04d4e;
+        }
+        .homestay-link:hover {
+            color: #fdc411;
+        }
+        .merchant-link:hover {
+            color: #fe8c00;
+        }
+        .gongyi-link:hover {
+            color: #f04d4e;
+        }
+    }
+    .banner-row {
+        @include clearfix;
+    }
+    .carousel {
+        width: 550px;
+        float: left;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    a {
+        .pic-1 {
+            float: left;
+            width: 150px;
+            height: 240px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-size: 150px;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            background-image: url("http://p0.meituan.net/codeman/e473bb428f070321269b23370ff02ba956209.jpg");
+            &:hover {
+                @include shadow;
+            }
+        }
+    }
+    .banner-logincard {
+        float: left;
+        .login-container {
+            width: 228px;
+            height: 238px;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            .login-avatar {
+                padding-top: 30px;
+                text-align: center;
+                margin: 0 auto 4px;
+                span {
+                    border: 4px solid #e5e5e5;
+                    box-sizing: content-box;
+                }
+            }
+            .user-name {
+                font-size: 16px;
+                color: #222;
+                text-align: center;
+                font-weight: 500;
+                white-space: nowrap;
+                width: 6em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0 auto;
+            }
+            .register,
+            .login {
+                margin: 10px auto 15px;
+                text-align: center;
+                button {
+                    width: 118px;
+                    color: #333;
+                    border-color: #e5e5e5;
+                    &:hover {
+                        background-color: #f6f6f6;
+                        transition: background-color 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    .pic-2 {
+        float: left;
+        width: 270px;
+        height: 165px;
+        background-size: 270px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        margin-top: 10px;
+        margin-right: 10px;
+        background-image: url("http://p1.meituan.net/codeman/8cce56c467a17e04f3094d1e455462a0132772.png");
+    }
+    .pic-3 {
+        float: left;
+        width: 270px;
+        height: 165px;
+        background-size: 270px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        margin-top: 10px;
+        margin-right: 10px;
+        background-image: url("http://p1.meituan.net/codeman/16442c19da1f1c4544f794e29d99c92051716.jpg");
+    }
+    .pic-4 {
+        float: left;
+        width: 150px;
+        height: 165px;
+        margin-top: 10px;
+        margin-right: 10px;
+        background-size: 150px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        background-image: url("http://p1.meituan.net/codeman/5b21cddb4bb1cbc3a9c3bce0f726c75940469.jpg");
+    }
+    .download-app {
+        float: left;
+        width: 228px;
+        height: 165px;
+        margin-top: 10px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        text-align: center;
+        .qrcode-box {
+            margin: 10px auto 0;
+            text-align: center;
+            img {
+                width: 95px;
+                height: 95px;
+            }
+        }
+        .app-name {
+            font-size: 16px;
+            color: #222222;
+            font-weight: 500;
+        }
+        .s1 {
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 2px;
+            .red {
+                color: #ec5330;
+                margin-right: 5px;
+            }
+            .gard {
+                color: #3f3f3f;
+            }
+        }
+    }
+}

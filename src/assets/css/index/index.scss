@@ -1,0 +1,23 @@
+.index-container {
+    width: 1190px;
+    margin: 0 auto;
+    .banner-container {
+        width: 1190px;
+        margin: 0 auto;
+        position: relative;
+        &::after,&::before{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .left-banner {
+            float: left;
+        }
+        .right-banner {
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            position: relative;
+        }
+    }
+}
