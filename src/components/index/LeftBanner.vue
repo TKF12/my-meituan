@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div
-            class="category-nav-detail-wrapper" 
+            class="category-nav-detail-wrapper"
             v-if="children.length"
             @mouseenter="mouNav"
             @mouseleave="mouNavEnd"
@@ -44,56 +44,56 @@
 
 <script>
 export default {
-    data() {
-        return {
-            children: [],
-            list: [
-                {
-                    type: "food",
-                    name: "美食",
-                    items: [
-                        {
-                            title: "美食",
-                            items: [
-                                "代金券",
-                                "甜点饮品",
-                                "火锅",
-                                "自助餐",
-                                "小吃快餐",
-                            ],
-                        },
-                    ],
-                },
-                {
-                    type: "takeout",
-                    name: "外卖",
-                    items: [
-                        {
-                            title: "外卖",
-                            items: ["美团外卖"],
-                        },
-                    ],
-                },
-            ],
-        };
+  data() {
+    return {
+      children: [],
+      list: [
+        {
+          type: 'food',
+          name: '美食',
+          items: [
+            {
+              title: '美食',
+              items: [
+                '代金券',
+                '甜点饮品',
+                '火锅',
+                '自助餐',
+                '小吃快餐',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'takeout',
+          name: '外卖',
+          items: [
+            {
+              title: '外卖',
+              items: ['美团外卖'],
+            },
+          ],
+        },
+      ],
+    };
+  },
+  methods: {
+    itemMou(item) {
+      this.children = item;
     },
-    methods: {
-        itemMou(item) {
-            this.children = item;
-        },
-        itemMouend() {
-            this.timer = setTimeout(() => {
-                this.children = [];
-            console.log(this.children);
-            }, 200);
-        },
-        mouNav() {
-            clearTimeout(this.timer);
-        },
-        mouNavEnd() {
-            this.children = [];
-        }
+    itemMouend() {
+      this.timer = setTimeout(() => {
+        this.children = [];
+        console.log(this.children);
+      }, 200);
     },
+    mouNav() {
+      clearTimeout(this.timer);
+    },
+    mouNavEnd() {
+      this.children = [];
+    },
+  },
 };
 </script>
 

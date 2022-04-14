@@ -1,0 +1,128 @@
+@import "../method.scss";
+.index-container {
+    .scenes-body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        margin-top: 1px;
+        .slider-content {
+            width: 10000000px;
+            margin: 0px 12px;
+            position: relative;
+            overflow: hidden;
+            @include clearfix;
+            transition: left 500ms;
+            .slider-item {
+                height: 297px;
+                width: 214px;
+                float: left;
+                margin-right: 19px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: 50%;
+                position: relative;
+                background-color: red;
+                img {
+                    border-radius: 4px;
+                    width: 100%;
+                    border: 0px;
+                }
+                .film-info {
+                    position: absolute;
+                    height: 100px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    border-bottom-left-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                    background-image: linear-gradient(
+                        -180deg,
+                        rgba(0, 0, 0, 0) 0%,
+                        rgba(29, 45, 55, 0.8) 99%
+                    );
+                    .score {
+                        font-size: 12px;
+                        color: #fff;
+                        text-align: left;
+                        margin-top: 48px;
+                        padding-left: 10px;
+                        font-weight: 500;
+                        span {
+                            margin: 3px;
+                            font-size: 16px;
+                            color: #fd9827;
+                            font-weight: 500;
+                        }
+                    }
+                    .name {
+                        text-align: left;
+                        color: #fff;
+                        padding-left: 10px;
+                        font-size: 16px;
+                        white-space: nowrap;
+                        width: 6em;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-weight: 500;
+                    }
+                    .ticket {
+                        background: #ff4949;
+                        border-radius: 100px;
+                        color: #fff;
+                        padding: 2px 12px 3px 12px;
+                        font-size: 14px;
+                        position: relative;
+                        top: -24px;
+                        cursor: pointer;
+                        line-height: 20px;
+                        text-align: center;
+                        float: right;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .left-btn,
+            .right-btn {
+                opacity: 0.8;
+                transition: opacity 0.5s;
+            }
+        }
+        .left-btn,
+        .right-btn {
+            cursor: pointer;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            z-index: 33;
+            left: 0px;
+            top: calc(50% - 20px);
+            opacity: 0;
+            transition: opacity 0.5s;
+            &:after {
+                content: "";
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-right: 2px solid #fff;
+                border-top: 2px solid #fff;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                transform: rotate(225deg);
+            }
+        }
+        .right-btn {
+            left: inherit;
+            right: 0px !important;
+            transform: rotate(180deg);
+        }
+    }
+}
