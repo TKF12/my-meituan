@@ -145,6 +145,12 @@
         background-color: #fff;
         background-image: url("http://p1.meituan.net/codeman/5b21cddb4bb1cbc3a9c3bce0f726c75940469.jpg");
     }
+    .pic-2:hover,
+    .pic-3:hover,
+    .pic-4:hover {
+        box-shadow: 0 5px 16px 0 rgb(0 0 0 / 15%);
+        transition: box-shadow 0.5s;
+    }
     .download-app {
         float: left;
         width: 228px;

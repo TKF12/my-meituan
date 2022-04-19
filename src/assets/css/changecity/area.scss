@@ -1,0 +1,15 @@
+.area{
+    h3{
+        font-size: 16px;
+        color: #333;
+        font-weight: 500;
+        display: inline-block;
+    }
+    .disabled{
+        cursor: not-allowed;
+    }
+    .search{
+        display: inline-block;
+        margin-left: 40px;
+    }
+}

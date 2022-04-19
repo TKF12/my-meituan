@@ -8,7 +8,7 @@
             :hide="true"
         />
         <div class="recommend-list">
-            <a href="" class="recommend-item" v-for="(item, i) in list.navList[act].list">
+            <a href="" class="recommend-item" v-for="(item, i) in list.navList[act].list" :key="i">
                 <div class="card-container">
                     <div class="img-box">
                         <img :src="item.img" :title="item.title">

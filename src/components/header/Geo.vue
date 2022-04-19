@@ -4,7 +4,7 @@
         <i class="el-icon-location"></i>
         深圳
     </span>
-    <router-link class="change-city" :to="{path: '/'}">切换城市</router-link>
+    <router-link class="change-city" :to="{name: 'Changecity'}">切换城市</router-link>
     [
     <router-link :to="{path: '/'}">香港</router-link>
     <router-link :to="{path: '/'}">谢岗</router-link>

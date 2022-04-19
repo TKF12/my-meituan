@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Default from '@/layout/default.vue';
 import Index from '@/page/index.vue';
+import Changecity from '@/page/changecity.vue';
 
 Vue.use(VueRouter);
 
@@ -13,9 +14,14 @@ const routes = [
     redirect: '/index',
     children: [
       {
-        path: '/index',
+        path: 'index',
         name: 'Index',
         component: Index,
+      },
+      {
+        path: '/changecity',
+        name: 'Changecity',
+        component: Changecity,
       },
     ],
   },

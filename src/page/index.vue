@@ -42,7 +42,7 @@ export default {
                 score: 4,
                 address: '平湖',
                 scoreNum: 345,
-                price: 10
+                price: 10,
               },
               {
                 title: '红荔村肠粉（云景豪园店）',
@@ -50,7 +50,7 @@ export default {
                 score: 4.1,
                 address: '春风万佳/文锦渡',
                 scoreNum: 345,
-                price: 8.8
+                price: 8.8,
               },
               {
                 title: '首脑美发沙龙（桂芳园店）',
@@ -58,7 +58,7 @@ export default {
                 score: 4,
                 address: '春风万佳/文锦渡',
                 scoreNum: 345,
-                price: 8.8
+                price: 8.8,
               },
               {
                 title: '万岁寿司·料理（IBCmall店）',
@@ -66,7 +66,7 @@ export default {
                 score: 4,
                 address: '平湖',
                 scoreNum: 345,
-                price: 8.8
+                price: 8.8,
               },
               {
                 title: '愿者上钩（大浪店）',
@@ -74,7 +74,7 @@ export default {
                 score: 4,
                 address: '平湖',
                 scoreNum: 345,
-                price: 8.8
+                price: 8.8,
               },
               {
                 title: '汤鲜生自助回转火锅百汇（坂田天虹店）',
@@ -82,7 +82,7 @@ export default {
                 score: 4.5,
                 address: '平湖',
                 scoreNum: 345,
-                price: 8.8
+                price: 8.8,
               },
               {
                 title: '汤鲜生自助回转火锅百汇（坂田天虹店）',
@@ -90,7 +90,7 @@ export default {
                 score: 4.5,
                 address: '平湖',
                 scoreNum: 345,
-                price: 8.8
+                price: 8.8,
               },
               {
                 title: '汤鲜生自助回转火锅百汇（坂田天虹店）',
@@ -98,7 +98,7 @@ export default {
                 score: 4.5,
                 address: '平湖',
                 scoreNum: 345,
-                price: 8.8
+                price: 8.8,
               },
               {
                 title: '汤鲜生自助回转火锅百汇（坂田天虹店）',
@@ -106,7 +106,7 @@ export default {
                 score: 4.5,
                 address: '平湖',
                 scoreNum: 345,
-                price: 8.8
+                price: 8.8,
               },
               {
                 title: '汤鲜生自助回转火锅百汇（坂田天虹店）',
@@ -114,11 +114,11 @@ export default {
                 score: 4.5,
                 address: '平湖',
                 scoreNum: 345,
-                price: 8.8
-              }
-            ]
-          }
-        ]
+                price: 8.8,
+              },
+            ],
+          },
+        ],
       },
     };
   },
