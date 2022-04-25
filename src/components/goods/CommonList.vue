@@ -201,15 +201,14 @@ export default {
   },
   methods: {
     toggleBtn(e, i) {
+      this.index = i;
       e.stopPropagation();
-      if (!this.show) {
-        this.show = true;
+      this.show = !this.show;
+      if (this.show) {
         e.target.innerHTML = '收起<i class="el-icon-arrow-up"></i>';
       } else {
-        this.show = false;
         e.target.innerHTML = `更多${this.dealList[i].length}个优惠<i class="el-icon-arrow-down"></i>`;
       }
-      this.index = i;
     },
     changeType(val) {
       if (val === 'sort') {
