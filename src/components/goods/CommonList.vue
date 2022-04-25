@@ -201,8 +201,8 @@ export default {
   },
   methods: {
     toggleBtn(e, i) {
-      this.index = i;
       e.stopPropagation();
+      this.index = i;
       this.show = !this.show;
       if (this.show) {
         e.target.innerHTML = '收起<i class="el-icon-arrow-up"></i>';
