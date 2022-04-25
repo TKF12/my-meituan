@@ -1,0 +1,44 @@
+@import "../method.scss";
+.list-container {
+    margin: 0 auto;
+    width: 1190px;
+    padding-top: 10px;
+    .crumb {
+        margin: 10px 0;
+        color: #222;
+        .el-breadcrumb__item {
+            font-size: 12px;
+            color: #222;
+            span {
+                color: #222 !important;
+                font-weight: inherit;
+            }
+        }
+    }
+    .center-content {
+        @include clearfix;
+        .left-content {
+            width: 950px;
+            float: left;
+            .filter-section-wrapper {
+                margin-top: 10px;
+                border: 1px solid #e5e5e5;
+                background-color: #fff;
+                .filter-box {
+                    padding-bottom: 15px;
+                    .filter-component:nth-last-child(n + 2) {
+                        .tags {
+                            padding-bottom: 10px;
+                            border-bottom: 1px solid #e5e5e5;
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            float: left;
+            width: 230px;
+            margin-left: 10px;
+        }
+    }
+}

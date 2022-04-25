@@ -84,7 +84,6 @@ export default {
     itemMouend() {
       this.timer = setTimeout(() => {
         this.children = [];
-        console.log(this.children);
       }, 200);
     },
     mouNav() {

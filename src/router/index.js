@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Default from '@/layout/default.vue';
 import Index from '@/page/index.vue';
 import Changecity from '@/page/changecity.vue';
+import Goods from '@/page/goods.vue';
 
 Vue.use(VueRouter);
 
@@ -19,9 +20,14 @@ const routes = [
         component: Index,
       },
       {
-        path: '/changecity',
+        path: 'changecity',
         name: 'Changecity',
         component: Changecity,
+      },
+      {
+        path: 'goods/:s',
+        name: 'Goods',
+        component: Goods,
       },
     ],
   },

@@ -1,0 +1,195 @@
+.commonlist {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+    .sort-option {
+        padding: 15px 20px 2px;
+        height: 20px;
+        .tag-group {
+            > div {
+                display: inline-block;
+                min-width: 96px;
+                span {
+                    display: inline-block;
+                    color: #666;
+                    padding: 0 10px;
+                    cursor: pointer;
+                }
+                &:nth-child(2) {
+                    span {
+                        position: relative;
+                        &:before {
+                            position: absolute;
+                            right: -3px;
+                            content: "";
+                            top: -1px;
+                            display: block;
+                            border: 5px solid transparent;
+                            border-bottom-color: #ccc;
+                        }
+                        &:after {
+                            position: absolute;
+                            right: -3px;
+                            content: "";
+                            top: 11px;
+                            display: block;
+                            border: 5px solid transparent;
+                            border-top-color: #ccc;
+                        }
+                    }
+                }
+                .active {
+                    color: #222222;
+                    font-weight: 500;
+                }
+                .sort-up {
+                    &:before {
+                        border-bottom-color: #222 !important;
+                    }
+                }
+                .sort-down {
+                    &:after {
+                        border-top-color: #222 !important;
+                    }
+                }
+            }
+        }
+    }
+    .common-list-main {
+        padding: 11px 20px;
+        background: #ffffff;
+        // border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        color: #333;
+        font-size: 14px;
+        line-height: 20px;
+        .default-card {
+            .default-list-item {
+                padding: 20px 0 16px;
+                min-height: 125px;
+                border-top: 1px solid #e5e5e5;
+                .list-item-pic {
+                    display: block;
+                    position: absolute;
+                    height: 125px;
+                    width: 220px;
+                    span {
+                        background: #fb6433;
+                        border-radius: 2px;
+                        position: absolute;
+                        line-height: 13px;
+                        width: 20px;
+                        margin-left: -3px;
+                        margin-top: 3px;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #fff;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 4px;
+                    }
+                }
+                .list-item-desc {
+                    margin-left: 220px;
+                    padding-left: 20px;
+                    font-size: 12px;
+                    color: #666;
+                    .list-item-desc-top {
+                        padding-bottom: 10px;
+                        a {
+                            font-weight: 500;
+                            font-size: 16px;
+                            color: #333;
+                            display: block;
+                        }
+                        .item-score {
+                            margin-top: 6px;
+                            display: flex;
+                            align-items: center;
+                            .el-rate__item {
+                                .el-rate__icon {
+                                    font-size: 15px;
+                                    line-height: 20px;
+                                }
+                            }
+                            > span {
+                                margin-left: 10px;
+                                vertical-align: text-top;
+                            }
+                            .cumNum {
+                                color: #ff9900;
+                            }
+                        }
+                        .item-site-info {
+                            margin-top: 6px;
+                            .item-site-map {
+                                margin-left: 20px;
+                                i {
+                                    color: #ff9900;
+                                }
+                            }
+                        }
+                        .item-bottom-info {
+                            margin-top: 6px;
+                            font-size: 12px;
+                            color: #666;
+                        }
+                    }
+                    .dash-sperator-line {
+                        border-top: 1px dashed #e5e5e5;
+                        width: 100%;
+                    }
+                    .common-deal-container {
+                        padding-top: 10px;
+                        a {
+                            display: block;
+                            padding: 6px 10px 8px;
+                            margin-left: -10px;
+                            &:hover {
+                                background-color: #f8f8f8;
+                                border-radius: 4px;
+                            }
+                            .deal-title {
+                                font-size: 14px;
+                                color: #666;
+                                height: 20px;
+                                line-height: 20px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+                            .deal-info {
+                                .deal-price {
+                                    font-size: 15px;
+                                    color: #ff6600;
+                                    margin-right: 10px;
+                                    span {
+                                        font-size: 12px;
+                                    }
+                                }
+                                .deal-value {
+                                    font-size: 12px;
+                                    color: #999;
+                                }
+                            }
+                        }
+                        .toggle-btn{
+                            margin-top: 16px;
+                            font-size: 12px;
+                            cursor: pointer;
+                            &:hover{
+                                color: #FE8C00;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

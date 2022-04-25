@@ -10,7 +10,7 @@
           <CityList text="最近访问" :list="recent"/>
       </div>
       <div class="m-hot">
-          <Hot :list="a_z"/>
+          <Hot />
       </div>
   </div>
 </template>
