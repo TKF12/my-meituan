@@ -1,9 +1,12 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import { VueJsonp } from 'vue-jsonp';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+
+Vue.use(VueJsonp);
 
 Vue.use(ElementUI);
 

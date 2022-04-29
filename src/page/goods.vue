@@ -24,7 +24,13 @@
                     <CommonList />
                 </div>
             </div>
-            <div class="right-content">right-content</div>
+            <div class="right-content">
+              <div class="map-container">
+                <Maps @fxd="changeFxd" />
+                <div :style="{height: hgt ? '200px' : '0'}"></div>
+                <RecommendList />
+              </div>
+            </div>
         </div>
     </div>
 </template>
@@ -32,14 +38,19 @@
 <script>
 import FilterBox from '@/components/goods/Filter.vue';
 import CommonList from '@/components/goods/CommonList.vue';
+import Maps from '@/components/goods/Maps.vue';
+import RecommendList from '@/components/goods/RecommendList.vue';
 
 export default {
   components: {
     FilterBox,
     CommonList,
+    Maps,
+    RecommendList,
   },
   data() {
     return {
+      hgt: false,
       sortList: [
         {
           title: '美食',
@@ -86,6 +97,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    changeFxd(val) {
+      this.hgt = val;
+    },
   },
 };
 </script>

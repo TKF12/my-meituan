@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="common-list-main">
-            <div class="default-card" v-for="(item, i) in goodList" :key="item.type">
+            <div class="default-card" v-for="(item, i) in goodList" :key="i">
                 <div class="default-list-item">
                     <a href="" class="list-item-pic">
                         <span>{{i+1}}</span>
@@ -118,7 +118,9 @@
                                     </div>
                                 </a>
                             </template>
-                            <div class="toggle-btn" @click="toggleBtn($event, i)">
+                            <div class="toggle-btn"
+                                v-if="dealList[i]"
+                                @click="toggleBtn($event, i)">
                                 更多{{dealList[i].length}}个优惠<i class="el-icon-arrow-down"></i>
                             </div>
                         </div>
@@ -130,18 +132,21 @@
 </template>
 
 <script>
+import api from '@/api/index';
+
 export default {
-  created() {
-    // const obj = {};
-    console.log(this.goodList.map((ele, i) => {
+  async created() {
+    await api.getGoodList().then((rep) => {
+      this.goodList = rep;
+    });
+    this.goodList.forEach((ele, i) => {
       const ss = ele;
-      if (!this.dealList[i]) {
-        this.dealList[i] = [];
-        this.dealList[i] = ss.dealItems.slice(2);
+      this.dealList[i] = ss.dealItems.slice(2);
+      if (!this.dealList[i].length) {
+        this.dealList[i] = false;
       }
       ss.dealItems = ss.dealItems.slice(0, 2);
-      return ss;
-    }));
+    });
   },
   data() {
     return {

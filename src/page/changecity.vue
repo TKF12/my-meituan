@@ -19,8 +19,17 @@
 import Area from '@/components/changecity/Area.vue';
 import CityList from '@/components/changecity/CityList.vue';
 import Hot from '@/components/changecity/Hot.vue';
+import api from '@/api/index';
 
 export default {
+  created() {
+    api.getHot().then((rep) => {
+      this.popuList = rep;
+    });
+    api.getRecents().then((rep) => {
+      this.recent = rep;
+    });
+  },
   components: {
     Area,
     CityList,
@@ -28,22 +37,8 @@ export default {
   },
   data() {
     return {
-      popuList: [{
-        id: 1,
-        name: '北京',
-        pinyin: 'beijing',
-        acronym: 'bj',
-        rank: 'S',
-        firstChar: 'b',
-      }],
-      recent: [{
-        id: 1,
-        name: '北京',
-        pinyin: 'beijing',
-        acronym: 'bj',
-        rank: 'S',
-        firstChar: 'b',
-      }],
+      popuList: [],
+      recent: [],
     };
   },
 };

@@ -2,7 +2,7 @@
   <div class="header-entry">
     <span class="current-city">
         <i class="el-icon-location"></i>
-        深圳
+        {{this.$store.state.city}}
     </span>
     <router-link class="change-city" :to="{name: 'Changecity'}">切换城市</router-link>
     [
@@ -19,6 +19,22 @@
 
 <script>
 export default {
+  data() {
+    return {
+      city: '',
+    };
+  },
+  async created() {
+    await this.$jsonp('https://apis.map.qq.com/ws/location/v1/ip', {
+      key: 'CBRBZ-XN7K2-WK5UJ-CZE7N-WELSZ-V3FWF',
+      output: 'jsonp',
+    }).then((rep) => {
+      console.log(rep.result);
+      this.$store.dispatch('setLocaTion', rep.result.location);
+      this.city = rep.result.ad_info.city.replace('市', '');
+    });
+    this.$store.dispatch('setCity', JSON.parse(localStorage.getItem('city')) || this.city);
+  },
 
 };
 </script>

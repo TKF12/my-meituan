@@ -1,5 +1,6 @@
 <template>
-    <div class="header">
+    <div class="header"
+      :style="{paddingBottom: $route.name === 'Index' ? '35px' : 0}">
         <HeaderBar />
         <HeaderSearch />
     </div>

@@ -22,7 +22,7 @@
         :id="'city-' + i.toUpperCase()">
           <span class="city-label">{{i.toUpperCase()}}</span>
           <div class="cities">
-              <a class="city" v-for="n in item" :key="n">
+              <a class="city" v-for="n in item" :key="n" @click="cityClick(n)">
                 {{n}}
               </a>
           </div>
@@ -31,22 +31,26 @@
 </template>
 
 <script>
+import api from '@/api/index';
+
 export default {
   data() {
     return {
       a_z: 'abcdefghjklmnpqrstwxyz'.toUpperCase().split(''),
-      list: [{
-        id: 1,
-        name: '北京',
-        pinyin: 'beijing',
-        acronym: 'bj',
-        rank: 'S',
-        firstChar: 'b',
-      }],
+      list: [],
       filterList: [],
     };
   },
-  created() {
+  methods: {
+    cityClick(item) {
+      this.$store.dispatch('setCity', item);
+      this.$router.push({ name: 'Index' });
+    },
+  },
+  async created() {
+    await api.getCityList().then((rep) => {
+      this.list = rep;
+    });
     const obj = {};
     this.list.forEach((ele) => {
       if (!obj[ele.firstChar]) {

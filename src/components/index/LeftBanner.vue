@@ -43,38 +43,18 @@
 </template>
 
 <script>
+import api from '@/api/index';
+
 export default {
+  created() {
+    api.getNavList().then((rep) => {
+      this.list = rep;
+    });
+  },
   data() {
     return {
       children: [],
-      list: [
-        {
-          type: 'food',
-          name: '美食',
-          items: [
-            {
-              title: '美食',
-              items: [
-                '代金券',
-                '甜点饮品',
-                '火锅',
-                '自助餐',
-                '小吃快餐',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'takeout',
-          name: '外卖',
-          items: [
-            {
-              title: '外卖',
-              items: ['美团外卖'],
-            },
-          ],
-        },
-      ],
+      list: [],
     };
   },
   methods: {
