@@ -25,4 +25,10 @@ export default {
   getRecommend() {
     return instance.get('/list/recommend.json');
   },
+  getLogin(params) {
+    return instance.get('/login', { params });
+  },
+  getRegister(params) {
+    return instance.get('/register', { params });
+  },
 };

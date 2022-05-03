@@ -25,13 +25,25 @@
                             src="https://s0.meituan.net/bs/fe-web-meituan/e350c4a/img/avatar.jpg"
                         ></el-avatar>
                     </div>
-                    <p class="user-name">Hi！你好</p>
-                    <div class="register">
-                        <el-button round>注册</el-button>
-                    </div>
-                    <div class="login">
-                        <el-button round>立即登录</el-button>
-                    </div>
+                    <p class="user-name">
+                        {{$store.state.userName ? $store.state.userName : 'Hi！你好'}}
+                    </p>
+                    <template v-if="!$store.state.userName">
+                        <div class="register">
+                            <el-button round>
+                                <router-link :to="{name: 'Register'}">
+                                    注册
+                                </router-link>
+                            </el-button>
+                        </div>
+                        <div class="login">
+                            <el-button round>
+                                <router-link :to="{name: 'Login'}">
+                                    立即登录
+                                </router-link>
+                            </el-button>
+                        </div>
+                    </template>
                 </div>
             </div>
         </div>

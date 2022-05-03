@@ -39,8 +39,14 @@
         .user-entry {
             display: inline-block;
             margin-left: 15px;
-            .login {
+            .login,.login-name {
                 color: #fe8c00;
+            }
+            .quit{
+                cursor: pointer;
+            }
+            > span{
+                margin-left: 10px;    
             }
         }
     }

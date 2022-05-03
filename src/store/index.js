@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     city: '',
     location: {},
+    userName: '',
   },
   mutations: {
     setCity(state, player) {
@@ -14,6 +15,9 @@ export default new Vuex.Store({
     },
     setLocaTion(state, player) {
       state.location = player;
+    },
+    setUser(state, player) {
+      state.userName = player;
     },
   },
   actions: {
@@ -23,6 +27,10 @@ export default new Vuex.Store({
     },
     setLocaTion({ commit }, player) {
       commit('setLocaTion', player);
+    },
+    setUser({ commit }, player) {
+      localStorage.setItem('user', JSON.stringify(player));
+      commit('setUser', player);
     },
   },
   modules: {

@@ -11,8 +11,14 @@
     <router-link :to="{path: '/'}">镇惠阳</router-link>
     ]
     <div class="user-entry">
-        <router-link class="login" :to="{name: 'login'}">立即登录</router-link>
-        <router-link class="register" :to="{name: 'register'}">注册</router-link>
+        <template v-if="!$store.state.userName">
+          <router-link class="login" :to="{name: 'Login'}">立即登录</router-link>
+          <router-link class="register" :to="{name: 'Register'}">注册</router-link>
+        </template>
+        <template v-else>
+          <span class="login-name" >{{$store.state.userName}}</span>
+          <span class="quit" @click="quit">退出</span>
+        </template>
     </div>
   </div>
 </template>
@@ -29,13 +35,19 @@ export default {
       key: 'CBRBZ-XN7K2-WK5UJ-CZE7N-WELSZ-V3FWF',
       output: 'jsonp',
     }).then((rep) => {
-      console.log(rep.result);
       this.$store.dispatch('setLocaTion', rep.result.location);
       this.city = rep.result.ad_info.city.replace('市', '');
     });
     this.$store.dispatch('setCity', JSON.parse(localStorage.getItem('city')) || this.city);
   },
-
+  methods: {
+    quit() {
+      this.$store.dispatch('setUser', '');
+      if (this.$router.name !== 'Index') {
+        this.$router.push({ name: 'Index' });
+      }
+    },
+  },
 };
 </script>
 

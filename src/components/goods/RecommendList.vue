@@ -17,7 +17,7 @@
                             show-score
                             text-color="#999"
                             disabled-void-color="#c3c3c3"
-                            :score-template="`${parseFloat(item.commentNum)}个评价`"
+                            :score-template="`${item.commentNum}个评价`"
                         >
                         </el-rate>
                     </div>
@@ -36,20 +36,23 @@
 </template>
 
 <script>
-import api from "@/api/index";
+import api from '@/api/index';
 
 export default {
-    created() {
-        api.getRecommend().then((rep) => {
-            console.log(rep);
-            this.list = rep;
-        });
-    },
-    data() {
-        return {
-            list: [],
-        };
-    },
+  created() {
+    api.getRecommend().then((rep) => {
+      this.list = rep.map((el) => {
+        const ele = el;
+        ele.score = +el.score;
+        return el;
+      });
+    });
+  },
+  data() {
+    return {
+      list: [],
+    };
+  },
 };
 </script>
 
